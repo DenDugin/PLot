@@ -92,6 +92,7 @@ new_Dialog::new_Dialog(QWidget *parent) :
 
 
 }
+
 new_Dialog::~new_Dialog()
 {
     delete ui;
