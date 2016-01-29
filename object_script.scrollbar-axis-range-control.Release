@@ -1,0 +1,13 @@
+INPUT(
+./release\main.o
+./release\mainwindow.o
+./release\qcustomplot.o
+./release\dialog.o
+./release\new_dialog.o
+./release\con_dialog.o
+./release\moc_mainwindow.o
+./release\moc_qcustomplot.o
+./release\moc_dialog.o
+./release\moc_new_dialog.o
+./release\moc_con_dialog.o
+);
