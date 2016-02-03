@@ -3,7 +3,7 @@
 #include "mainwindow.h"
 #include "../../qcustomplot.h"
 #include "QLabel"
-
+//Spect-Analyzing
 
 new_Dialog::new_Dialog(QWidget *parent) :
     QDialog(parent),
