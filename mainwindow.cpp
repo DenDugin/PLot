@@ -14,6 +14,7 @@
 #include "new_dialog.h"
 #include "QMessageBox"
 #include <QFileDialog>
+#include <QTimer>
 const double TwoPi = 6.283185307179586;
 const int W = 500;
 
@@ -50,32 +51,6 @@ MainWindow::MainWindow(QWidget *parent) :
 
   ui->spinBox->setRange(0, 10);
   ui->h_Slider->setRange(0, 10);
-
-
-
-
-//  for (int i = 0; i <= 4095;i++)
-//  {
-//      First[i] = cos((TwoPi*i*2048/48000));
-//      //qDebug()<<First[i];
-//  };
-
-
-
-
-//  int N = 4096;
-//  int F = 4096;
-
-
-//ReadXL();   // 1
-//setupItemDemo(ui->plot); // Oscilograf  2
-//ExamplSlot();
-
-//FFTAnalysis(xlcos,Second,N,F);
-      //setupSimpleItemDemo(ui->plot);
-      //mousePressEvent(this);
-
-     //setupPlot();    //
 
   ui->verticalScrollBar->setRange(-500, 500);
 
@@ -333,8 +308,6 @@ void MainWindow:: ExamplSlot()
     //ui->plot->xAxis->setRange(0, 1000, Qt::AlignCenter);
     ui->plot->xAxis->grid()->setZeroLinePen(Qt::NoPen);
 
-
-    // add the bracket at the top:
     QCPItemBracket *bracket = new QCPItemBracket(ui->plot);
     ui->plot->addItem(bracket);
     bracket->left->setCoords(-8, 1.1);
@@ -384,8 +357,6 @@ void MainWindow::bracketDataSlot()
     Rez[i] = y[i]*qCos(TwoPi*W*i/48000) + yy[i]*qSin(TwoPi*W*i/48000);
   }
   ui->plot->graph()->setData(x, Rez);
-
-  //itemDemoPhaseTracer->setGraphKey((8*M_PI+fmod(M_PI*1.5-phase, 6*M_PI))/k);
 
   ui->plot->replot();
 
